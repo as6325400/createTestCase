@@ -1,0 +1,4 @@
+name: luckyKingHard
+limits:
+    memory: 256
+    output: 256

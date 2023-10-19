@@ -1,0 +1,4 @@
+name: excessLove
+limits:
+    memory: 256
+    output: 256
