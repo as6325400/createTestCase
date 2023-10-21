@@ -1,0 +1,4 @@
+name: point
+limits:
+    memory: 256
+    output: 256
