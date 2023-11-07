@@ -1,0 +1,4 @@
+name: stack_retake
+limits:
+    memory: 256
+    output: 256
