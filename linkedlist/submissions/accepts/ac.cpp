@@ -77,6 +77,7 @@ void Delete(list *li, int num){
   }
 }
 
+int del[5005];
 
 void reverse(list *li, int site, int r){
   node *n = li -> head, *t;
@@ -102,71 +103,38 @@ void reverse(list *li, int site, int r){
   }
 }
 
-void output(string caseName){
-  ifstream input(caseName);
-  string outputName = caseName;
-  outputName.pop_back();
-  outputName.pop_back();
-  outputName += "ans";
-  ofstream output(outputName);
-  int del[5005];
-  for(int i = 0; i < 5005; i++) del[i] = 0;
-  int n, q;
-  list *li = (list*)malloc(sizeof(list));
-  init(li);
-  input >> n >> q;
-  for(int i = 0; i < n; i++){
-    int num;
-    input >> num;
-    insert(li, num);
-  }
-
-  for(int i = 0; i < q; i++){
-    int mode;
-    input >> mode;
-    if(mode == 1){
-      int num;
-      input >> num;
-      if(del[num] == 1) continue;
-      del[num] = 1;
-      Delete(li, num);
-    }
-    else{
-      int site, r;
-      input >> site >> r;
-      // 特判已經出界的
-      if(site + r - 1 > li -> count) continue;
-      else
-      {
-        reverse(li, site, r);
-      }
-    }
-  }
-  node *t = li -> head;
-  int count = 0;
-  while(t){
-    if(count > 5050) break;
-    count++;
-    output << t -> num << ' ';
-    t = t -> next;
-  }
-  output << '\n';
-  
-}
-
 signed main(){
-  ios_base::sync_with_stdio(false);
-  cin.tie(nullptr);
-  string path = "../data/";
-  // sample testcase
-  output(path + "sample/" + "1.in");
-  output(path + "sample/" + "2.in");
-  // secret testcase
-  int testCaseName = 13;
-  for(int i = 3; i <= testCaseName; i++){
-    string filename = path + "secret/" + to_string(i) + ".in";
-    output(filename);
-  }
-  return 0;
+    int n, q;
+    cin >> n >> q;
+    list *li = (list*)malloc(sizeof(list));
+    for(int i = 0; i < n; i++){
+        int num;
+        cin >> num;
+        insert(li, num);
+    }
+    for(int i = 0; i < q; i++){
+        int mode;
+        cin >> mode;
+        if(mode == 1){
+            int num;
+            cin >> num;
+            Delete(li, num);
+        }
+        else{
+            int site, r;
+            cin >> site >> r;
+            // 特判已經出界的
+            if(site + r - 1 > li -> count) continue;
+            else
+            {
+                reverse(li, site, r);
+            }
+        }
+    }
+    node *t = li -> head;
+    while(t){
+        cout << t -> num << ' ';
+        t = t -> next;
+    }
+    cout << '\n';
 }
- 
