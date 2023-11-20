@@ -1,0 +1,4 @@
+name: joseph
+limits:
+    memory: 256
+    output: 256

@@ -45,7 +45,7 @@ signed main(){
   output(path + "sample/" + "3.in");
   output(path + "sample/" + "4.in");
   // secret testcase
-  int testCaseName = 21;
+  int testCaseName = 23;
   for(int i = 5; i <= testCaseName; i++){
     string filename = path + "secret/" + to_string(i) + ".in";
     output(filename);
