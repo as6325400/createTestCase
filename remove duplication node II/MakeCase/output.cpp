@@ -13,14 +13,20 @@ void output(string caseName){
   ofstream output(outputName);
   int num;
   input >> num;
-  set<int> s;
+  vector<int> ans;
+  map<int, int> mp;
   for(int i = 0; i < num; i++){
     int n;
     input >> n;
-    s.insert(n);
+    mp[n]++;
   }
-  output << s.size() << '\n';
-  for(auto &i:s){
+  for(auto &i:mp){
+    if(i.second == 1){
+      ans.push_back(i.first);
+    }
+  }
+  output << ans.size() << '\n';
+  for(auto &i:ans){
     output << i << ' ';
   }
   output << '\n';
