@@ -1,0 +1,4 @@
+name: Two sum
+limits:
+    memory: 256
+    output: 256

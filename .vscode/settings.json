@@ -6,6 +6,10 @@
         "ratio": "cpp",
         "iostream": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "fstream": "cpp",
+        "xlocmes": "cpp",
+        "set": "cpp",
+        "random": "cpp"
     }
 }
