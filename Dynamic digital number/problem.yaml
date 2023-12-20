@@ -1,0 +1,4 @@
+name: Dynamic digital number
+limits:
+    memory: 512
+    output: 256

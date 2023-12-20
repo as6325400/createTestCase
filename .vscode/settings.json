@@ -10,6 +10,13 @@
         "fstream": "cpp",
         "xlocmes": "cpp",
         "set": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "filesystem": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "xlocinfo": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp"
     }
 }
