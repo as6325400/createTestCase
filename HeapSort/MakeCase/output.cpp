@@ -11,7 +11,26 @@ void output(string caseName){
   outputName.pop_back();
   outputName += "ans";
   ofstream output(outputName);
-  
+  vector<int> odd;
+  vector<int> even;
+  int n;
+  input >> n;
+  for(int i = 0; i < n; i++){
+    int num;
+    input >> num;
+    if(num % 2 == 1) odd.push_back(num);
+    else even.push_back(num);
+  }
+  sort(odd.begin(), odd.end());
+  sort(even.rbegin(), even.rend());
+  for(auto i:odd){
+    output << i << ' ';
+  }
+  output << '\n';
+  for(auto i:even){
+    output << i << ' ';
+  }
+  output << '\n';
 }
 
 signed main(){
@@ -20,9 +39,11 @@ signed main(){
   string path = "../data/";
   // sample testcase
   output(path + "sample/" + "1.in");
+  output(path + "sample/" + "2.in");
+  output(path + "sample/" + "3.in");
   // secret testcase
-  int testCaseName = 10;
-  for(int i = 2; i <= testCaseName; i++){
+  int testCaseName = 12;
+  for(int i = 4; i <= testCaseName; i++){
     string filename = path + "secret/" + to_string(i) + ".in";
     output(filename);
   }
