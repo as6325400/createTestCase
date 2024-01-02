@@ -1,0 +1,4 @@
+name: connect
+limits:
+    memory: 512
+    output: 256

@@ -1,0 +1,6 @@
+name: MST
+limits:
+    memory: 512
+    output: 256
+validation:
+    custom
