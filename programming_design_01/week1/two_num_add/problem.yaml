@@ -1,0 +1,4 @@
+name: two_num_add
+limits:
+    memory: 256
+    output: 256

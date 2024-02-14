@@ -1,0 +1,4 @@
+name: three_point_two
+limits:
+    memory: 256
+    output: 256
