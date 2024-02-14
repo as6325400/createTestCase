@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
     // 輸出不存在的邊
     ll count_weight = 0;
     for(auto i:ss){
-      if(i.first > n or i.second > n){
+      if(i.first > n or i.second > n or i.first <= 0 or i.second <= 0){
         cerr << "does not exist point.\n";
         wa();
       }
