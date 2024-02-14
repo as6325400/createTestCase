@@ -1,4 +1,4 @@
 *.exe
 *.out
 *.zip
-./DS_Store
+**/.DS_Store

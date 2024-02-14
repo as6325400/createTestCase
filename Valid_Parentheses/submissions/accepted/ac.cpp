@@ -6,7 +6,7 @@ using namespace std;
 char rv(char a){
     if(a == '}') return '{';
     if(a == ']') return '[';
-    if(a == ')') return '(';
+    // if(a == ')') return '(';
     return '#';
 }
 
