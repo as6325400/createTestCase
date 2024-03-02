@@ -31,7 +31,7 @@ void output(string caseName){
   }
   for(int i = 1; i <= n; i++){
     for(int j = 1; j <= m; j++){
-      gray[i][j] = lround(pic[0][i][j] * 0.299 + pic[1][i][j] * 0.587 + pic[2][i][j] * 0.114);
+      gray[i][j] = (int)(((pic[0][i][j] * 0.299 + pic[1][i][j] * 0.587 + pic[2][i][j] * 0.114) * 10 + 5) / 10);
     }
   }
   for(int i = 1; i <= n; i++){
@@ -42,7 +42,7 @@ void output(string caseName){
           num += filter[k + 1][q + 1] * gray[i + k][j + q];
         }
       }
-      output << lround(num) << ' ';
+      output << (int)((num * 10 + 5) / 10) << ' ';
     }
     output << '\n';
   }
