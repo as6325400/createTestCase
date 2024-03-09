@@ -1,0 +1,4 @@
+name: GCD
+limits:
+    memory: 256
+    output: 256
