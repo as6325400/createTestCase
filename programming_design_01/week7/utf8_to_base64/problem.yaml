@@ -1,0 +1,4 @@
+name: utf8_to_base64
+limits:
+    memory: 256
+    output: 256
