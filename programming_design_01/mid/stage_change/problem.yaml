@@ -1,0 +1,4 @@
+name: stage_change
+limits:
+    memory: 256
+    output: 256

@@ -1,0 +1,4 @@
+name: lucky_num
+limits:
+    memory: 256
+    output: 256

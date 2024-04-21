@@ -1,0 +1,4 @@
+name: hot
+limits:
+    memory: 256
+    output: 256
