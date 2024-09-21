@@ -1,0 +1,4 @@
+name: The magic square
+limits:
+    memory: 256
+    output: 256

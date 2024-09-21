@@ -1,0 +1,4 @@
+name: Navigation Problem
+limits:
+    memory: 256
+    output: 256

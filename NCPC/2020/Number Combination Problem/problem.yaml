@@ -1,0 +1,4 @@
+name: Number Combination Problem
+limits:
+    memory: 256
+    output: 256
