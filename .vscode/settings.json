@@ -1,6 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
+        "*.embeddedhtml": "html",
         "chrono": "cpp",
         "utility": "cpp",
         "ratio": "cpp",
@@ -24,6 +25,8 @@
         "xlocale": "cpp",
         "tuple": "cpp",
         "iosfwd": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "ostream": "cpp",
+        "bitset": "cpp"
     }
 }

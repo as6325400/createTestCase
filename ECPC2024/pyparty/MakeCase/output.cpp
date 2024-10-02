@@ -11,7 +11,22 @@ void output(string caseName){
   outputName.pop_back();
   outputName += "ans";
   ofstream output(outputName);
-  
+  int n, ans = 0, mx = 0;
+  input >> n;
+  map<int, int> mp;
+  for(int i = 0; i < n; i++){
+    int x, y;
+    input >> x >> y;
+    mp[x]++;
+    mp[y]--;
+  }
+ 
+  for(auto i : mp){
+    ans += i.second;
+    mx = max(mx, ans);
+  }
+ 
+  output << mx << '\n';
 }
 
 signed main(){
@@ -19,9 +34,9 @@ signed main(){
   cin.tie(nullptr);
   string path = "../data/";
   // sample testcase
-  output(path + "sample/" + "1.in");
+  output(path + "sample/" + "01.in");
   // secret testcase
-  int testCaseName = 10;
+  int testCaseName = 13;
   for(int i = 2; i <= testCaseName; i++){
     string id;
     if(i < 10) id = "0" + to_string(i);

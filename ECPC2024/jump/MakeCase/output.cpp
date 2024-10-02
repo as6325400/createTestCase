@@ -11,7 +11,22 @@ void output(string caseName){
   outputName.pop_back();
   outputName += "ans";
   ofstream output(outputName);
-  
+  int n;
+  input >> n;
+  vector<int> arr(n);
+  vector<int> dp(n);
+  for(int i = 0; i < n; i++) input >> arr[i];
+  int odd = 0, counto = 0;
+  for(int i = 0; i < n; i += 2){
+    odd = max(odd, arr[i]);
+    counto++;
+  }
+  int even = 0, counte = 0;
+  for(int i = 1; i < n; i += 2){
+    even = max(even, arr[i]);
+    counte++;
+  }
+  output<< max(odd + counto, even + counte) << '\n';
 }
 
 signed main(){
@@ -19,10 +34,11 @@ signed main(){
   cin.tie(nullptr);
   string path = "../data/";
   // sample testcase
-  output(path + "sample/" + "1.in");
+  output(path + "sample/" + "01.in");
+  output(path + "sample/" + "02.in");
   // secret testcase
   int testCaseName = 10;
-  for(int i = 2; i <= testCaseName; i++){
+  for(int i = 3; i <= testCaseName; i++){
     string id;
     if(i < 10) id = "0" + to_string(i);
     else id = to_string(i);
