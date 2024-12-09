@@ -1,0 +1,6 @@
+name: scp
+limits:
+    memory: 256
+    output: 256
+validation:
+    custom interactive

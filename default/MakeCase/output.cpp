@@ -19,7 +19,7 @@ signed main(){
   cin.tie(nullptr);
   string path = "../data/";
   // sample testcase
-  output(path + "sample/" + "1.in");
+  output(path + "sample/" + "01.in");
   // secret testcase
   int testCaseName = 10;
   for(int i = 2; i <= testCaseName; i++){

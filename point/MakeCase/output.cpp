@@ -20,19 +20,19 @@ void output(string caseName){
   for(int i = 0; i < n; i++){
     if(s[i] != 'b'){
       ss.push(s[i]);
-      if(s[i] == 'w') y++;
-      if(s[i] == 'a') x--;
-      if(s[i] == 's') y--;
-      if(s[i] == 'd') x++;
+      if(s[i] == 'u') y++;
+      if(s[i] == 'l') x--;
+      if(s[i] == 'd') y--;
+      if(s[i] == 'r') x++;
     }
     else{
       if(ss.empty()) continue;
       char c = ss.top();
       ss.pop();
-      if(c == 'w') y--;
-      if(c == 'a') x++;
-      if(c == 's') y++;
-      if(c == 'd') x--;
+      if(c == 'u') y--;
+      if(c == 'l') x++;
+      if(c == 'd') y++;
+      if(c == 'r') x--;
     }
   }
   output << x << ' ' << y << '\n';
@@ -43,13 +43,15 @@ signed main(){
   cin.tie(nullptr);
   string path = "../data/";
   // sample testcase
-  output(path + "sample/" + "1.in");
-  output(path + "sample/" + "2.in");
-  output(path + "sample/" + "3.in");
+  output(path + "sample/" + "01.in");
+  output(path + "sample/" + "02.in");
+  output(path + "sample/" + "03.in");
   // secret testcase
   int testCaseName = 15;
   for(int i = 4; i <= testCaseName; i++){
-    string filename = path + "secret/" + to_string(i) + ".in";
+    string filename = path + "secret/"; 
+    if(i < 10) filename += "0";
+    filename += to_string(i) + ".in";
     output(filename);
   }
   return 0;
