@@ -27,6 +27,8 @@
         "iosfwd": "cpp",
         "cstdlib": "cpp",
         "ostream": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "locale": "cpp",
+        "__split_buffer": "cpp"
     }
 }
