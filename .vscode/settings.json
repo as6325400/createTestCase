@@ -29,6 +29,9 @@
         "ostream": "cpp",
         "bitset": "cpp",
         "locale": "cpp",
-        "__split_buffer": "cpp"
+        "__split_buffer": "cpp",
+        "__bit_reference": "cpp",
+        "map": "cpp",
+        "unordered_map": "cpp"
     }
 }
