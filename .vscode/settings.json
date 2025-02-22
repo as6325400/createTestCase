@@ -32,6 +32,7 @@
         "__split_buffer": "cpp",
         "__bit_reference": "cpp",
         "map": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "ios": "cpp"
     }
 }

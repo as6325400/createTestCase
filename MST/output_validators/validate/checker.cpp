@@ -47,6 +47,10 @@ int main(int argc, char *argv[]){
     for(ll i = 0; i < m; i++){
       ll a, b, w;
       input >> a >> b >> w;
+      if(a > n or b > n or a <= 0 or b <= 0){
+        cerr << "does not exist point.\n";
+        wa();
+      }
       graph[a][b] = w;
       graph[b][a] = w;
     }

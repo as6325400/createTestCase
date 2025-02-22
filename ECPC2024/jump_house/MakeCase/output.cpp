@@ -59,7 +59,7 @@ signed main(){
   // sample testcase
   output(path + "sample/" + "01.in");
   // secret testcase
-  int testCaseName = 36;
+  int testCaseName = 52;
   for(int i = 2; i <= testCaseName; i++){
     string id;
     if(i < 10) id = "0" + to_string(i);
