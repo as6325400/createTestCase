@@ -1,0 +1,4 @@
+name: prime
+limits:
+    memory: 256
+    output: 256
