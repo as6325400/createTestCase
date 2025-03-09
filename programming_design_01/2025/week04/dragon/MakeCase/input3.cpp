@@ -9,10 +9,10 @@ int MAX = 1000000;
 int main(int argc, char* argv[]){
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  int teseCaseNum = 11;
+  int teseCaseNum = 12;
   registerGen(argc, argv, 1);
 
-  for(int i = 11; i <= teseCaseNum; i++){
+  for(int i = 12; i <= teseCaseNum; i++){
     string path = "../data/secret/";
     string id;
     if(i < 10) id = "0" + to_string(i);
@@ -22,8 +22,8 @@ int main(int argc, char* argv[]){
     int t = MAX_T;
     inputFile << t << '\n';
     for(int j = 0; j < t; j++){
-      int start = rnd.next(2, 10000) - 1;
-      int end = rnd.next(start + 1, min(start + 1 + 10000, MAX));
+      int start = rnd.next(1, 10);
+      int end = rnd.next(start + 1, MAX);
       inputFile << start << ' ' << end << '\n';
     }
     if (!inputFile.is_open()) {

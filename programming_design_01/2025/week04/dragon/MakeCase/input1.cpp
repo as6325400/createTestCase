@@ -3,6 +3,7 @@
 
 using namespace std;
 
+int MAX_T = 100000;
 int MAX = 1000000;
 
 int main(int argc, char* argv[]){
@@ -18,7 +19,7 @@ int main(int argc, char* argv[]){
     else id = to_string(i);
     string filename = path + id + ".in";
     ofstream inputFile(filename);
-    int t = MAX;
+    int t = MAX_T;
     inputFile << t << '\n';
     for(int j = 0; j < t; j++){
       int start = rnd.next(2, MAX) - 1;

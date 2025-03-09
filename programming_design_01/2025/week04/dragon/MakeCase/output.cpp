@@ -19,7 +19,7 @@ void output(string caseName){
     int s, e;
     input >> s >> e;
     mp[s]++;
-    mp[e]--;
+    mp[++e]--;
   }
   int _, tmp = 0, ans = -1e9;
   for(auto [_, val]:mp){
@@ -37,7 +37,7 @@ signed main(){
   output(path + "sample/" + "01.in");
   output(path + "sample/" + "02.in");
   // secret testcase
-  int testCaseName = 11;
+  int testCaseName = 12;
   for(int i = 3; i <= testCaseName; i++){
     string id;
     if(i < 10) id = "0" + to_string(i);

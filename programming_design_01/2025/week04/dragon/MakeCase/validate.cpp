@@ -3,6 +3,7 @@
 
 using namespace std;
 
+int MAX_T = 100000;
 int MAX = 1000000;
 
 void output(string caseName){
@@ -14,7 +15,7 @@ void output(string caseName){
   // ofstream output(outputName);
   int n;
   input >> n;
-  if(n > MAX) cout << caseName << '\n';
+  if(n > MAX_T) cout << caseName << '\n';
   for(int i = 0; i < n; i++){
     int s, e;
     input >> s >> e;
